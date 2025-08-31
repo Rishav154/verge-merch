@@ -10,7 +10,7 @@ export default function CartPage() {
 
   const count = useMemo(() => items.reduce((sum, it) => sum + (Number(it.qty) || 1), 0), [items])
 
-  const shipping = subtotal > 0 ? 0 : 0
+  const shipping = subtotal > 0 ? 40 : 0
   const tax = Math.round(subtotal * 0.0)
   const total = subtotal + shipping + tax
 
@@ -110,13 +110,13 @@ export default function CartPage() {
             </div>
 
             <div className="flex flex-col gap-3 pt-2">
-              <button
+              <Link
+                href="/checkout"
                 className="inline-flex items-center justify-center gap-2 rounded-md bg-primary px-4 py-2 text-primary-foreground hover:opacity-90 transition"
-                onClick={() => alert("Mock checkout — integrate Stripe for real payments.")}
               >
                 <CreditCard className="h-4 w-4" aria-hidden="true" />
                 Proceed to Checkout
-              </button>
+              </Link>
 
               <button
                 className="inline-flex items-center justify-center gap-2 rounded-md border px-4 py-2 hover:bg-muted transition"
