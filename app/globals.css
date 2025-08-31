@@ -4,12 +4,12 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #0b0f14; /* near-black */
+  --background: #0a1020; /* deep midnight navy */
   --foreground: #ffffff; /* high-contrast text */
-  --card: #0e141b; /* panel/card */
+  --card: #0c1224; /* cool-dark panel */
   --card-foreground: #ffffff;
 
-  --popover: #0e141b;
+  --popover: #0c1224;
   --popover-foreground: #ffffff;
 
   --primary: #00e5ff; /* electric cyan */
@@ -18,18 +18,18 @@
   --secondary: #ff3edb; /* neon magenta (accent) */
   --secondary-foreground: #0a0a0a;
 
-  --muted: #6b7280; /* gray for subtle UI */
+  --muted: #6b7280;
   --muted-foreground: #c6cdd6;
 
-  --accent: #ff3edb; /* align accent with secondary */
+  --accent: #ff3edb;
   --accent-foreground: #0a0a0a;
 
   --destructive: #ff4c4c;
   --destructive-foreground: #ffffff;
 
-  --border: #17212b; /* dark-cool border */
-  --input: #0b0f14;
-  --ring: rgba(0, 229, 255, 0.5);
+  --border: #0f1a2b; /* darker, cool border */
+  --input: #0a1020;
+  --ring: rgba(0, 229, 255, 0.45);
 
   --chart-1: #00e5ff;
   --chart-2: #ff3edb;
@@ -40,14 +40,14 @@
   --radius: 0.5rem;
 
   /* Sidebar (kept for completeness) */
-  --sidebar: #0b0f14;
+  --sidebar: #0a1020;
   --sidebar-foreground: #ffffff;
   --sidebar-primary: #00e5ff;
   --sidebar-primary-foreground: #0a0a0a;
   --sidebar-accent: #ff3edb;
   --sidebar-accent-foreground: #0a0a0a;
-  --sidebar-border: #17212b;
-  --sidebar-ring: rgba(0, 229, 255, 0.5);
+  --sidebar-border: #0f1a2b;
+  --sidebar-ring: rgba(0, 229, 255, 0.45);
 }
 
 .dark {

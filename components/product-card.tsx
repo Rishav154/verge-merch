@@ -28,12 +28,12 @@ export function ProductCard({ product }: { product: FullProduct }) {
       className="group rounded-lg border overflow-hidden bg-card text-card-foreground"
     >
       <Link href={`/product/${product.id}`} className="block">
-        <div className="relative aspect-[4/3] overflow-hidden">
+        <div className="relative aspect-square overflow-hidden">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={product.image || "/placeholder.svg"}
+            src={product.image || "/placeholder.svg?height=800&width=800&query=verge%20merch"}
             alt={`${product.name} product image`}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
           />
           {product.badge && (
             <span className="absolute left-2 top-2 rounded-sm bg-accent text-accent-foreground text-[11px] px-2 py-1 neon-accent">
@@ -42,16 +42,16 @@ export function ProductCard({ product }: { product: FullProduct }) {
           )}
         </div>
       </Link>
-      <div className="p-3 flex items-center justify-between">
+      <div className="p-4 flex items-center justify-between">
         <div>
-          <h3 className="font-medium text-sm text-foreground">{product.name}</h3>
+          <h3 className="font-medium text-base text-foreground">{product.name}</h3>
           <p className="text-foreground/70 text-sm">${product.price.toFixed(2)}</p>
         </div>
         <motion.button
           onClick={handleAdd}
           disabled={adding}
           whileTap={{ scale: 0.95 }}
-          className={`inline-flex items-center gap-2 rounded-md border text-sm px-3 py-1.5 transition-colors ${
+          className={`inline-flex items-center gap-2 rounded-md border text-sm px-4 py-2 transition-colors ${
             added
               ? "bg-primary text-primary-foreground border-primary"
               : "text-primary border-border hover:bg-primary/10"

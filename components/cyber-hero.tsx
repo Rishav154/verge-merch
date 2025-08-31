@@ -131,6 +131,17 @@ export function CyberHero() {
           </span>
         </>
       )}
+      {!prefersReducedMotion && (
+        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 z-10 h-24">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `linear-gradient(to bottom, rgba(0,0,0,0) 0%, color-mix(in oklab, var(--background) 40%, transparent) 55%, var(--background) 100%)`,
+            }}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-px bg-foreground/10" />
+        </div>
+      )}
     </section>
   )
 }
